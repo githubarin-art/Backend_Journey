@@ -1,0 +1,5 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/addTask\",\"status\":\"200\",\"responseTime\":\"7.332\"}","timestamp":"2026-01-07T17:28:45.593Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/addTask\",\"status\":\"200\",\"responseTime\":\"1.286\"}","timestamp":"2026-01-07T17:28:49.600Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/addTask\",\"status\":\"200\",\"responseTime\":\"0.685\"}","timestamp":"2026-01-07T17:28:51.659Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/fetchTasks\",\"status\":\"200\",\"responseTime\":\"1.234\"}","timestamp":"2026-01-07T17:28:56.164Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"DELETE\",\"url\":\"/fetchTasks/2\",\"status\":\"200\",\"responseTime\":\"1.847\"}","timestamp":"2026-01-07T17:29:21.048Z"}
