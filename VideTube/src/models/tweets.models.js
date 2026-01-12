@@ -1,22 +1,26 @@
 import mongoose, { Schema } from "mongoose";
 
-const commentSchema = new Schema(
+const tweetSchema = new Schema(
   {
     content: {
       type: String,
       required: true,
       trim: true,
       index: true,
+      lowercase: true,
     },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-    video: {
-      type: Schema.Types.ObjectId,
-      ref: "Video",
-      required: true,
+    likes: {
+      type: Number,
+      default: 0,
+    },
+    dislikes: {
+      type: Number,
+      default: 0,
     },
   },
   {
@@ -24,6 +28,5 @@ const commentSchema = new Schema(
   }
 );
 
-const Comment = mongoose.model("Comment", commentSchema);
-
-export default Comment;
+const Tweet = mongoose.model("Tweet", tweetSchema);
+export default Tweet;
