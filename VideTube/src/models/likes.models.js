@@ -12,6 +12,16 @@ const likeSchema = new Schema(
       ref: "Video",
       required: true,
     },
+    tweet: {
+      type: Schema.Types.ObjectId,
+      ref: "Tweet",
+      required: false,
+    },
+    comment: {
+      type: Schema.Types.ObjectId,
+      ref: "Comment",
+      required: false,
+    },
     isLike: {
       type: Boolean,
       required: true,
