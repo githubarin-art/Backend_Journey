@@ -8,12 +8,8 @@ const storage = multer.diskStorage({
     });
   },
   filename: function (req, file, cb) {
-    console.log("Learning this:");
-    console.log("Log:", file.originalname);
-    console.log("Type:", file.mimetype);
-    console.log("Log:", file.fieldname);
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    cb(null, file.fieldname + "-" + uniqueSuffix);
+    cb(null, file.originalname);
     console.log("Log:", uniqueSuffix);
   },
 });
