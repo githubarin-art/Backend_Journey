@@ -20,12 +20,9 @@ app.use(express.static("public"));
 // importing routes
 import healthCheckRoutes from "./routes/healthCheck.routes.js";
 import UploadFilesRoutes from "./routes/upload.routes.js";
-import UploadVideosRoutes from "./routes/upload.routes.js";
-import DeleteFiles from "./routes/upload-delete.routes.js";
 
 // using routes
 app.use("/api/v1/health-check", healthCheckRoutes);
 app.use("/api/v1/file", UploadFilesRoutes);
-app.use("/api/v1/file", DeleteFiles);
-app.use("/api/v1/file", UploadVideosRoutes);
+
 export { app };
