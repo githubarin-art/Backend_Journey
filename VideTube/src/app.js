@@ -19,10 +19,8 @@ app.use(express.static("public"));
 
 // importing routes
 import healthCheckRoutes from "./routes/healthCheck.routes.js";
-import UploadFilesRoutes from "./routes/upload.routes.js";
 
 // using routes
 app.use("/api/v1/health-check", healthCheckRoutes);
-app.use("/api/v1/file", UploadFilesRoutes);
 
 export { app };
