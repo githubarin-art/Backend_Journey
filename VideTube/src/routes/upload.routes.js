@@ -27,8 +27,25 @@ router.post(
     { name: "thumbnail", maxCount: 2 },
   ]),
   (req, res) => {
-    const title = req.body;
-    res.json({ title: title });
+    const { title } = req.body;
+    if (!title)
+      res.status(400).json({
+        message: "Title is not being fetched!!",
+      });
+
+    const videos = req.files?.video;
+    const thumbnails = req.files?.thumbnail;
+    if (!videos || !thumbnails) {
+      res.status(400).json({
+        message: "Fail to Fetch the videos and thumnails",
+      });
+    } else {
+      res.status(200).json({
+        title: title,
+        video: videos,
+        thumbnail: thumbnails,
+      });
+    }
   }
 );
 export default router;
